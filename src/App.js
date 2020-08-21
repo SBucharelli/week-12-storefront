@@ -8,6 +8,11 @@ import {
 
 import Products from './Products'
 import Logos from './Logos'
+import Stores from './Stores'
+import Categories from './Categories'
+import Variations from './Variations'
+import ProductTypes from './Product-Types'
+
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -32,6 +37,18 @@ export default function BasicExample() {
           <li>
             <Link to="/logos">Logos</Link>
           </li>
+          <li>
+            <Link to="/stores">Stores</Link>
+          </li>
+          <li>
+            <Link to="/categories">Categories</Link>
+          </li>
+          <li>
+            <Link to="/variations">Variations</Link>
+          </li>
+          <li>
+            <Link to="/product-types">Product Types</Link>
+          </li>
         </ul>
 
         <hr />
@@ -52,6 +69,18 @@ export default function BasicExample() {
           </Route>
           <Route path="/logos">
             <Logos />
+          </Route>
+          <Route path="/stores">
+            <Stores />
+          </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
+          <Route path="/variations">
+            <Variations />
+          </Route>
+          <Route path="/product-types">
+            <ProductTypes />
           </Route>
         </Switch>
       </div>
