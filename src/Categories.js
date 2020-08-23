@@ -1,4 +1,5 @@
 import React from 'react'
+import { Table } from 'reactstrap'
 
 class Categories extends React.Component {
     constructor() {
@@ -25,12 +26,30 @@ class Categories extends React.Component {
     }
 
     render() {
+        const { response } = this.state
+
         return (
             <div>
-                <div>Categories Place holder </div>
-                <div>{this.state.response.map(category =>
-                    <p key={category.key}>{category.name}</p>
-                )}</div>
+                <h1>Category List</h1>
+                <Table striped>
+                    <thead>
+                        <tr>
+                            <th>Id Number</th>
+                            <th>Category Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.response.map(category =>
+                            <tr key={category.key}>
+                                <td>{category._id}</td>
+                                <td>{category.name}
+                                    {category.Type}
+                                    {category.category}
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
+                </Table>
             </div>
         )
     }

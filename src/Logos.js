@@ -1,4 +1,5 @@
 import React from 'react'
+import { Table } from 'reactstrap'
 
 class Logos extends React.Component {
     constructor() {
@@ -25,15 +26,31 @@ class Logos extends React.Component {
     };
 
     render() {
+        const { response } = this.state
+
         return (
             <div>
-                <div>Logos Place holder</div>
-                <div>{this.state.response.map(logo =>
-                    <p key={logo.key}>{logo.name}</p>
-                )}</div>
+                <h1>Logos List</h1>
+                <Table striped>
+                    <thead>
+                        <tr>
+                            <th>Id Number</th>
+                            <th>Logo Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.response.map(logo =>
+                            <tr key={logo.key}>
+                                <td>{logo._id}</td>
+                                <td>{logo.name}</td>
+                            </tr>
+                        )}
+                    </tbody>
+                </Table>
             </div>
         )
     }
 }
+
 
 export default Logos

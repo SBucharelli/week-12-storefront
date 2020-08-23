@@ -1,4 +1,5 @@
 import React from 'react'
+import { Table } from 'reactstrap'
 
 class Products extends React.Component {
     constructor() {
@@ -25,12 +26,27 @@ class Products extends React.Component {
     };
 
     render() {
+        const { response } = this.state
+
         return (
             <div>
-                <div>Products Place holder</div>
-                <div>{this.state.response.map(product =>
-                    <p key={product.key}>{product.title}</p>
-                )}</div>
+                <h1>Products List</h1>
+                <Table striped>
+                    <thead>
+                        <tr>
+                            <th>Id Number</th>
+                            <th>Item Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.response.map(product =>
+                            <tr key={product.key}>
+                                <td>{product._id}</td>
+                                <td>{product.title}</td>
+                            </tr>
+                        )}
+                    </tbody>
+                </Table>
             </div>
         )
     }
