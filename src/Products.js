@@ -45,7 +45,7 @@ class Products extends React.Component {
                         )}
                     </tbody>
                 </Table>
-            </div >
+            </div>
         )
     }
 }
