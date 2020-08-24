@@ -26,8 +26,6 @@ class ProductTypes extends React.Component {
     };
 
     render() {
-        const { response } = this.state
-
         return (
             <div>
                 <h1>Product Types List</h1>
@@ -40,7 +38,7 @@ class ProductTypes extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.response.map(productType =>
-                            <tr key={productType.key}>
+                            <tr key={productType.id}>
                                 <td>{productType._id}</td>
                                 <td>{productType.Type}</td>
                             </tr>

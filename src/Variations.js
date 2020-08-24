@@ -26,8 +26,6 @@ class Variations extends React.Component {
     };
 
     render() {
-        const { response } = this.state
-
         return (
             <div>
                 <h1>Variations List</h1>
@@ -40,7 +38,7 @@ class Variations extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.response.map(variation =>
-                            <tr key={variation.key}>
+                            <tr key={variation.id}>
                                 <td>{variation._id}</td>
                                 <td>{variation.variation}</td>
                             </tr>

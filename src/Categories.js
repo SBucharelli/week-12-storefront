@@ -26,8 +26,6 @@ class Categories extends React.Component {
     }
 
     render() {
-        const { response } = this.state
-
         return (
             <div>
                 <h1>Category List</h1>
@@ -40,7 +38,7 @@ class Categories extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.response.map(category =>
-                            <tr key={category.key}>
+                            <tr key={category.id}>
                                 <td>{category._id}</td>
                                 <td>{category.name}
                                     {category.Type}

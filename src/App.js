@@ -12,6 +12,7 @@ import Stores from './Stores'
 import Categories from './Categories'
 import Variations from './Variations'
 import ProductTypes from './Product-Types'
+import './App.css'
 
 
 // This site has 3 pages, all of which are rendered
@@ -94,7 +95,8 @@ export default function BasicExample() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      <h1>Home</h1>
+      <h3>Welcome to My Storefront</h3>
     </div>
   );
 }

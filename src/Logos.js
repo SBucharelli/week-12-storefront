@@ -26,8 +26,6 @@ class Logos extends React.Component {
     };
 
     render() {
-        const { response } = this.state
-
         return (
             <div>
                 <h1>Logos List</h1>
@@ -40,7 +38,7 @@ class Logos extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.response.map(logo =>
-                            <tr key={logo.key}>
+                            <tr key={logo.id}>
                                 <td>{logo._id}</td>
                                 <td>{logo.name}</td>
                             </tr>

@@ -26,19 +26,6 @@ class Stores extends React.Component {
     render() {
         return (
             <div>
-                <div>Stores Place holder</div>
-                <div>{this.state.response.map(store =>
-                    <p key={store.key}>{store.name}</p>
-                )}</div>
-            </div>
-        )
-    }
-
-    render() {
-        const { response } = this.state
-
-        return (
-            <div>
                 <h1>Store List</h1>
                 <Table striped>
                     <thead>
@@ -49,7 +36,7 @@ class Stores extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.response.map(store =>
-                            <tr key={store.key}>
+                            <tr key={store.id}>
                                 <td>{store._id}</td>
                                 <td>
                                     {store.name}
